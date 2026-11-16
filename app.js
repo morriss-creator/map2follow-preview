@@ -134,11 +134,11 @@ if(calm||!("IntersectionObserver" in window))rv.forEach(e=>e.classList.add("in")
 else{const io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{rootMargin:"0px 0px -8% 0px"});rv.forEach(e=>io.observe(e))}
 
 // ---- packages and add-ons
-let pkg=null;const addons=new Set();
-const reqText=()=>[pkg?`Package: ${pkg.n} ($${pkg.p})`:"",addons.size?`Add-ons (price on request): ${[...addons].join(", ")}`:""].filter(Boolean).join("\n");
+let pkg=null,sketch=false;const addons=new Set();
+const reqText=()=>[sketch?"Request: Free preview sketch":"",pkg?`Package: ${pkg.n} ($${pkg.p})`:"",addons.size?`Add-ons (price on request): ${[...addons].join(", ")}`:""].filter(Boolean).join("\n");
 function syncReq(){const s=$("selPkg");const t=reqText();s.hidden=!t;s.textContent=t.replace(/\n/g," · ");
- const w=$("w");const rest=w.value.split("\n").filter(l=>!/^(Package|Add-ons)/.test(l)).join("\n").trim();w.value=[t,rest].filter(Boolean).join("\n")}
-document.querySelectorAll("[data-pkg]").forEach(a=>a.addEventListener("click",()=>{pkg={n:a.dataset.pkg,p:a.dataset.price};syncReq();setTimeout(()=>$("n").focus({preventScroll:true}),400)}));
+ const w=$("w");const rest=w.value.split("\n").filter(l=>!/^(Request|Package|Add-ons)/.test(l)).join("\n").trim();w.value=[t,rest].filter(Boolean).join("\n")}
+document.querySelectorAll("[data-pkg],[data-sketch]").forEach(a=>a.addEventListener("click",()=>{if(a.dataset.pkg)pkg={n:a.dataset.pkg,p:a.dataset.price};if(a.dataset.sketch!==undefined)sketch=true;syncReq();setTimeout(()=>$("n").focus({preventScroll:true}),400)}));
 document.querySelectorAll(".addon").forEach(b=>b.addEventListener("click",()=>{const on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);on?addons.add(b.textContent):addons.delete(b.textContent);syncReq()}));
 const names=()=>[pkg?pkg.n+" package":"",...addons].filter(Boolean);
 // ---- contact
@@ -147,7 +147,7 @@ const names=()=>[pkg?pkg.n+" package":"",...addons].filter(Boolean);
 const FORM_ENDPOINT="";
 const TO="map2follow@gmail.com";
 $("f").addEventListener("submit",e=>{e.preventDefault();
- const t=`Park map request\nPark: ${$("n").value||"-"}\nContact: ${$("e").value||"-"}\nPackage: ${pkg?pkg.n+" ($"+pkg.p+")":"-"}\nAdd-ons: ${[...addons].join(", ")||"-"}\nWishes: ${$("w").value||"-"}\n\nOur current map is attached.`;
+ const t=`${sketch?"Free preview sketch request":"Park map request"}\nPark: ${$("n").value||"-"}\nContact: ${$("e").value||"-"}\nPackage: ${pkg?pkg.n+" ($"+pkg.p+")":"-"}\nAdd-ons: ${[...addons].join(", ")||"-"}\nWishes: ${$("w").value||"-"}\n\nOur current map is attached.`;
  const st=$("st");
  if(FORM_ENDPOINT){
   fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({park:$("n").value,email:$("e").value,message:t})})
@@ -155,7 +155,7 @@ $("f").addEventListener("submit",e=>{e.preventDefault();
   return}
  try{navigator.clipboard.writeText(t).catch(()=>{})}catch(_){}
  st.textContent="Your email program opens with the request. Please attach your current map and send it. The text was also copied.";
- location.href="mailto:"+TO+"?subject="+encodeURIComponent("Park map request"+(pkg?" ("+pkg.n+" package)":"")+": "+($("n").value||""))+"&body="+encodeURIComponent(t)});
+ location.href="mailto:"+TO+"?subject="+encodeURIComponent((sketch?"Free preview sketch request":"Park map request")+(pkg?" ("+pkg.n+" package)":"")+": "+($("n").value||""))+"&body="+encodeURIComponent(t)});
 // close the mobile menu after choosing a link
 document.querySelectorAll(".mmp a").forEach(a=>a.addEventListener("click",()=>a.closest("details").open=false));
 })();
