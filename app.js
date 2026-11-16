@@ -9,6 +9,7 @@ const oh=location.hash.slice(1);if(OLD_HASH[oh]){history.replaceState(null,"","#
 const CATS={ride:{n:"Rides",c:"#ff5a3c"},food:{n:"Food",c:"#f59a0c"},shop:{n:"Shop",c:"#9a5fe0"},service:{n:"Service",c:"#1f8fd6"},place:{n:"Places",c:"#1fb26b"}};
 const P=[
 {id:"entrance",n:"Main entrance",c:"service",ic:"🎟️",d:"Tickets, info and the start of your visit."},
+{id:"meet",n:"Meeting point",c:"service",ic:"📍",d:"Agreed spot to regroup with your family or group."},
 {id:"parking",n:"Parking",c:"service",ic:"🅿️",d:"Parking right by the lake."},
 {id:"rack",n:"Mountain railway",c:"ride",ic:"🚞",d:"Rack railway through the green north of the park."},
 {id:"village",n:"Storybook village",c:"place",ic:"🏘️",d:"Small houses, tunnels and play areas."},
@@ -22,7 +23,7 @@ const P=[
 {id:"wc1",n:"Restrooms center",c:"service",ic:"🚻",d:"Restrooms in the middle of the park."},
 {id:"wc2",n:"Restrooms lakeside",c:"service",ic:"🚻",d:"Restrooms toward the lake."}];
 // pin positions in percent of the image (x,y); adjust with the #pins mode
-const RPOS={entrance:[54,70],parking:[48,83],rack:[40,23],village:[44,35],steam:[61,58],view:[30,61],cable:[85,61],shop:[40,41],crepes:[37,52],buffet:[56,52],snack:[78,53],wc1:[42,57],wc2:[72,71]};
+const RPOS={entrance:[54,70],meet:[49,64],parking:[48,83],rack:[40,23],village:[44,35],steam:[61,58],view:[30,61],cable:[85,61],shop:[40,41],crepes:[37,52],buffet:[56,52],snack:[78,53],wc1:[42,57],wc2:[72,71]};
 let cat="all",cur=null;
 
 P.forEach(p=>{const bt=document.createElement("button");bt.type="button";bt.className="item";bt.dataset.id=p.id;bt.setAttribute("aria-pressed","false");
@@ -51,10 +52,10 @@ apply();
 // ---- before/after slider
 const ba=$("ba"),rg=$("baR");
 const setP=v=>ba.style.setProperty("--p",v+"%");
-rg.addEventListener("input",()=>setP(rg.value));
+if(ba&&rg){rg.addEventListener("input",()=>setP(rg.value));
 if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&"IntersectionObserver" in window){
  let done=false;new IntersectionObserver((en,ob)=>{if(done||!en[0].isIntersecting)return;done=true;ob.disconnect();
-  const t0=performance.now(),D=2600;(function f(t){const k=Math.min(1,(t-t0)/D),v=50+Math.sin(k*Math.PI*2)*(1-k*.4)*30;setP(v);rg.value=v;if(k<1)requestAnimationFrame(f);else{setP(50);rg.value=50}})(t0)},{threshold:.6}).observe(ba)}
+  const t0=performance.now(),D=2600;(function f(t){const k=Math.min(1,(t-t0)/D),v=50+Math.sin(k*Math.PI*2)*(1-k*.4)*30;setP(v);rg.value=v;if(k<1)requestAnimationFrame(f);else{setP(50);rg.value=50}})(t0)},{threshold:.6}).observe(ba)}}
 
 // ---- packages and add-ons
 let pkg=null;const addons=new Set();
