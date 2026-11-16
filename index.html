@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Custom Illustrated Park Maps for Amusement, Safari &amp; Waterparks | Map2follow</title>
-<meta name="description" content="Map2follow designs custom illustrated 2D maps for amusement parks, safari parks, waterparks and adventure parks. Pricing is $299–$499 per park map. Request a quote.">
+<meta name="description" content="Map2follow designs custom illustrated 2D maps for amusement parks, safari parks, waterparks and adventure parks. Packages from $299 to $499 per park map. Request a quote.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://www.map2follow.com/">
 <link rel="alternate" hreflang="en" href="https://www.map2follow.com/">
 <link rel="alternate" hreflang="de" href="https://www.map2follow.ch/">
 <link rel="alternate" hreflang="x-default" href="https://www.map2follow.com/">
-<meta name="theme-color" content="#0d2b33">
+<meta name="theme-color" content="#00175c">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Map2follow">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Custom Illustrated Park Maps | Map2follow">
-<meta property="og:description" content="Map2follow designs custom illustrated 2D maps for amusement parks, safari parks, waterparks and adventure parks. Pricing is $299–$499 per park map. Request a quote.">
+<meta property="og:description" content="Map2follow designs custom illustrated 2D maps for amusement parks, safari parks, waterparks and adventure parks. Packages from $299 to $499 per park map. Request a quote.">
 <meta property="og:url" content="https://www.map2follow.com/">
 <meta property="og:image" content="https://www.map2follow.com/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -27,216 +27,312 @@
 <meta property="og:image:alt" content="Map2follow: custom illustrated park maps, $299–$499 per park map">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Custom Illustrated Park Maps | Map2follow">
-<meta name="twitter:description" content="Map2follow designs custom illustrated 2D maps for amusement parks, safari parks, waterparks and adventure parks. Pricing is $299–$499 per park map. Request a quote.">
+<meta name="twitter:description" content="Map2follow designs custom illustrated 2D maps for amusement parks, safari parks, waterparks and adventure parks. Packages from $299 to $499 per park map. Request a quote.">
 <meta name="twitter:image" content="https://www.map2follow.com/img/og-image.jpg">
 <link rel="preload" href="fonts/familjen-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/webp" imagesrcset="img/map-photo-800.webp 800w, img/map-photo-1200.webp 1200w, img/map-photo-1800.webp 1800w" imagesizes="(max-width:1152px) calc(100vw - 32px), 1120px" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" imagesrcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" imagesizes="(max-width:980px) min(520px, calc(100vw - 32px)), 560px" fetchpriority="high">
+<script>document.documentElement.classList.add("js")</script>
 <style>
 @font-face{font-family:"Familjen Grotesk";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/familjen-grotesk-latin.woff2) format("woff2")}
 @font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/instrument-sans-latin.woff2) format("woff2")}
-/* Layout: calm page with one large, colorful demo map as the centerpiece. */
-:root{--bg:#f3f8f6;--panel:#ffffff;--ink:#0d2b33;--mute:#587178;--line:#d6e5e1;--accent:#ff5a3c;--cta:#c83c24;--cta-hover:#a93019;--accent-ink:#ffffff;--sun:#ffc43d;--teal:#0f7a86;
---display:"Familjen Grotesk",system-ui,sans-serif;--body:"Instrument Sans",system-ui,sans-serif;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1b20;--panel:#112a31;--ink:#e8f5f3;--mute:#93b3b8;--line:#21404a;--teal:#4fc3cf;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0a1b20;--panel:#112a31;--ink:#e8f5f3;--mute:#93b3b8;--line:#21404a;--teal:#4fc3cf;color-scheme:dark}
+:root{--bg:#f3f8f6;--panel:#ffffff;--soft:#e9f2ff;--ink:#0d2b33;--mute:#587178;--line:#d6e5e1;--navy:#00175c;--navy2:#002a8f;--blue:#008cff;--blue-ink:#0066d6;--accent:#ff5a3c;--cta:#c83c24;--cta-hover:#a93019;--sun:#ffc43d;--teal:#0f7a86;
+--display:"Familjen Grotesk",system-ui,sans-serif;--body:"Instrument Sans",system-ui,sans-serif;--r:22px;--sh:0 24px 60px -30px rgba(0,23,92,.45);color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0a1b20;--panel:#112a31;--soft:#0e2532;--ink:#e8f5f3;--mute:#93b3b8;--line:#21404a;--teal:#4fc3cf;--blue-ink:#5aa9ff;color-scheme:dark}}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:12px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.55;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+html{scroll-padding-top:12px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;position:relative;-webkit-font-smoothing:antialiased}
 img{max-width:100%}
 [hidden]{display:none!important}
-.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;z-index:10}.skip:focus{left:16px}
-.w{max-width:1120px;margin-inline:auto}
-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
-.logo{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;flex:none}
-.logo svg{width:28px;height:28px}
-nav{display:flex;gap:18px;align-items:center}
-.nl{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:var(--mute);text-decoration:none;font-weight:500;font-size:15px}
-nav a:hover{color:var(--ink)}
-.mm{display:none;position:relative}
-.mm summary{list-style:none;cursor:pointer;font:600 14px var(--body);color:var(--ink);padding:10px 12px;border:2px solid var(--line);border-radius:10px;min-height:44px;display:flex;align-items:center}
-.mm summary::-webkit-details-marker{display:none}
-.mm[open] summary{border-color:var(--ink)}
-.mmp{position:absolute;right:0;top:calc(100% + 8px);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px;display:flex;flex-direction:column;min-width:200px;box-shadow:0 18px 40px -18px rgba(13,43,51,.45);z-index:5}
-.mmp a{padding:11px 12px;border-radius:8px;color:var(--ink)}
-.mmp a:hover{background:var(--bg)}
-nav a:focus-visible,.mm summary:focus-visible,.logo:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:6px}
-h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.025em;margin:0;text-wrap:balance}
-h1{font-size:clamp(38px,6.4vw,76px);font-weight:700;max-width:16ch}
-h2{font-size:clamp(28px,4vw,44px);font-weight:700}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;z-index:20}.skip:focus{left:16px}
+.w{max-width:1152px;margin-inline:auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.025em;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4.2vw,48px);font-weight:700}
 h3{font-size:20px;font-weight:700;line-height:1.2}
-.lead{font-size:clamp(17px,2vw,20px);color:var(--mute);max-width:58ch;margin:18px 0 0}
-.price{margin:16px 0 0;font-size:clamp(17px,2vw,20px);color:var(--ink);max-width:58ch;font-weight:500}
-.price a{color:var(--teal);font-weight:600;text-decoration:none}
-.price a:hover{text-decoration:underline}
-.price a:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-.hero{padding-block:28px 20px}
-.hero .price strong{font-weight:700}
-.btns{display:flex;gap:12px 20px;flex-wrap:wrap;align-items:center;margin-top:24px}
-.btn{font:600 16px var(--body);padding:13px 22px;border-radius:12px;border:2px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;display:inline-block}
-.btn.pri{background:var(--cta);border-color:var(--cta);color:var(--accent-ink)}
-.btn.pri:hover{background:var(--cta-hover);border-color:var(--cta-hover)}
-.tl{color:var(--teal);font-weight:600;text-decoration:none}.tl:hover{text-decoration:underline}
-.btn:focus-visible,.chip:focus-visible,textarea:focus-visible,input:focus-visible,.item:focus-visible,.tl:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-section{padding-block:44px}
-.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--teal);margin-bottom:10px}
-.demo{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:14px}
-.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:4px 4px 14px}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{font:600 14px var(--body);padding:10px 16px;min-height:44px;border-radius:999px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.stage{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;align-items:start}
-.mapbox{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
-.side{display:flex;flex-direction:column;gap:10px;min-width:0}
-.info{border:1px solid var(--line);border-radius:16px;padding:14px 16px;min-height:104px}
-.info b{font-family:var(--display);font-size:20px;display:block}
-.info span{color:var(--mute);font-size:15px}
-.list{display:flex;flex-direction:column;gap:6px;max-height:300px;overflow:auto}
-.item{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:12px;padding:10px;min-height:44px;font:500 14.5px var(--body);cursor:pointer}
-.item i{width:12px;height:12px;border-radius:50%;flex:none}
-.item[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-.note{color:var(--mute);font-size:14px;margin:12px 4px 2px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:26px;counter-reset:s;padding:0;list-style:none}
-.steps li{counter-increment:s}
-.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--sun);color:#0d2b33;font:700 18px var(--display);margin-bottom:10px}
-.steps p{margin:6px 0 0;color:var(--mute);font-size:15.5px}
-.faq{margin-top:26px;border-top:2px solid var(--ink);max-width:860px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;position:relative;font:700 19px/1.3 var(--display)}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:6px;top:14px;font:500 26px var(--body);color:var(--teal)}
-.faq details[open] summary::after{content:"\2212"}
-.faq summary:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-.faq p{margin:0 0 18px;color:var(--mute);font-size:16px;max-width:70ch}
-.contact{background:var(--ink);color:var(--bg);border-radius:24px;padding:clamp(22px,4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
-.contact h2{color:var(--bg)}.contact p{color:color-mix(in srgb,var(--bg) 75%,var(--ink))}
-.contact p a{color:var(--bg)}
-.contact textarea,.contact input{width:100%;font:16px var(--body);padding:12px;border-radius:10px;border:2px solid transparent;background:var(--bg);color:var(--ink);margin-top:8px}
-.contact label{font-size:14px;font-weight:600;display:block;margin-top:10px}
-.contact .btn{border-color:var(--bg);color:var(--bg);margin-top:12px}
-.contact .btn.pri{border-color:var(--cta);color:#fff}
-.status{font-size:14px;margin-top:8px;min-height:20px}
-footer{padding-block:28px 40px;color:var(--mute);font-size:14px}
-footer a{color:inherit;margin-inline-start:14px;display:inline-block;padding-block:6px}
-.legal{padding-block:28px 0;max-width:760px;font-size:15px;color:var(--mute)}.legal h2{font-size:22px;margin-bottom:10px;color:var(--ink)}.legal p{margin-top:10px}.legal a{color:inherit}
-@media (max-width:860px){.stage{grid-template-columns:minmax(0,1fr)}.list{max-height:none}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
-.hd-cta{font:600 14px var(--body);padding:11px 16px;border-radius:10px;background:var(--cta);color:#fff!important;text-decoration:none;white-space:nowrap}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--mute);max-width:60ch;margin:16px 0 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--blue-ink);margin-bottom:12px}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--sun))}
+section{padding-block:clamp(56px,8vw,96px)}
+.band-soft{background:linear-gradient(180deg,var(--soft),var(--bg))}
+.band-white{background:var(--panel)}
+.btn{font:600 16px var(--body);padding:14px 24px;border-radius:14px;border:2px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .18s,box-shadow .18s,background .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn.pri{background:var(--cta);border-color:var(--cta);color:#fff;box-shadow:0 12px 28px -12px rgba(200,60,36,.8)}
+.btn.pri:hover{background:var(--cta-hover);border-color:var(--cta-hover);box-shadow:0 16px 32px -12px rgba(200,60,36,.9)}
+.btn .ar{transition:transform .18s}.btn:hover .ar{transform:translateX(3px)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+/* header over hero */
+header{position:absolute;top:0;left:0;right:0;z-index:10}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.logo{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;flex:none}
+.logo svg{width:30px;height:30px}
+nav{display:flex;gap:20px;align-items:center}
+.nl{display:flex;gap:20px}
+.nl a{color:#c7d6ff;text-decoration:none;font-weight:500;font-size:15px;position:relative;padding-block:6px}
+.nl a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--sun);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.nl a:hover{color:#fff}.nl a:hover::after{transform:scaleX(1)}
+.mm{display:none;position:relative}
+.mm summary{list-style:none;cursor:pointer;font:600 14px var(--body);color:#fff;padding:10px 12px;border:2px solid rgba(255,255,255,.35);border-radius:10px;min-height:44px;display:flex;align-items:center}
+.mm summary::-webkit-details-marker{display:none}
+.mm[open] summary{border-color:#fff}
+.mmp{position:absolute;right:0;top:calc(100% + 8px);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px;display:flex;flex-direction:column;min-width:210px;box-shadow:var(--sh)}
+.mmp a{padding:11px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:500}
+.mmp a:hover{background:var(--soft)}
+.hd-cta{font:600 14px var(--body);padding:11px 16px;border-radius:10px;background:var(--cta);color:#fff;text-decoration:none;white-space:nowrap;transition:background .18s}
 .hd-cta:hover{background:var(--cta-hover)}
-.ba{--p:50%;position:relative;margin-top:30px;aspect-ratio:1800/1344;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px -28px rgba(13,43,51,.55);background:#9db0a0;user-select:none;touch-action:pan-y}
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;padding:124px 0 120px;background:radial-gradient(60% 70% at 85% 40%,rgba(0,140,255,.55),transparent 70%),radial-gradient(40% 50% at 5% 100%,rgba(255,90,60,.22),transparent 70%),linear-gradient(160deg,#00175c 0%,#001f7a 55%,#002a8f 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1px,transparent 1.4px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000,transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);pointer-events:none}
+.hero .w{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.hero .eyebrow{color:#c7d6ff}
+.hero h1{font-size:clamp(40px,5vw,62px);font-weight:700}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#ffc43d,#ff8a6b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{color:#c7d6ff;max-width:52ch}
+.pricechip{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin-top:22px;padding:10px 16px;border-radius:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(6px)}
+.pricechip strong{font:700 20px var(--display);color:#fff}.pricechip span{color:#c7d6ff;font-size:15px}
+.btns{display:flex;gap:14px 22px;flex-wrap:wrap;align-items:center;margin-top:26px}
+.tl-light{color:#fff;font-weight:600;text-decoration:none;border-bottom:2px solid rgba(255,196,61,.7);padding-bottom:2px}
+.tl-light:hover{border-color:var(--sun)}
+.ticks{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-wrap:wrap;gap:10px 22px;color:#c7d6ff;font-size:15px}
+.ticks li{display:flex;align-items:center;gap:8px}.ticks svg{width:18px;height:18px;flex:none}
+.hv{position:relative;aspect-ratio:1/1;max-width:600px;justify-self:end;width:100%;--mx:0;--my:0}
+.hv .pl{position:absolute;transition:transform .25s ease-out;will-change:transform}
+.hv .c1{inset:8% 4% 10% 0;border-radius:26px;overflow:hidden;border:6px solid #fff;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);transform:rotate(-3deg) translate(calc(var(--mx)*-10px),calc(var(--my)*-10px))}
+.hv .c2{width:46%;aspect-ratio:1800/1344;right:-4%;top:-2%;border-radius:18px;overflow:hidden;border:5px solid #fff;box-shadow:0 30px 60px -24px rgba(0,0,0,.6);transform:rotate(6deg) translate(calc(var(--mx)*18px),calc(var(--my)*18px))}
+.hv .c2 span{position:absolute;left:8px;bottom:8px;background:rgba(0,23,92,.85);color:#fff;font:600 11px var(--body);padding:4px 9px;border-radius:999px}
+.hv img{width:100%;height:100%;object-fit:cover;display:block}
+.trailsvg{position:absolute;inset:8% 4% 10% 0;width:96%;height:82%;pointer-events:none;transform:rotate(-3deg) translate(calc(var(--mx)*-10px),calc(var(--my)*-10px))}
+.trailsvg path{stroke-dasharray:2 12;animation:dash 2.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-28}}
+.fb{position:absolute;display:flex;align-items:center;gap:8px;background:#fff;color:#0d2b33;font:600 14px var(--body);padding:9px 14px 9px 10px;border-radius:999px;box-shadow:0 16px 30px -12px rgba(0,0,0,.45);animation:float 6s ease-in-out infinite;white-space:nowrap}
+.fb i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:15px;background:var(--c)}
+.fb.a{left:-6%;top:22%;--c:#ffe1d9}.fb.b{right:2%;bottom:6%;animation-delay:-2s;--c:#fff1c7}.fb.c{left:8%;bottom:2%;animation-delay:-4s;--c:#dcefff}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+.wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;display:block}
+.wave path{fill:var(--bg)}
+/* benefits */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:34px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 1px 0 rgba(0,0,0,.02);transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:transparent}
+.ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1,#008cff),var(--c2,#00175c));color:#fff;margin-bottom:16px;box-shadow:0 10px 20px -10px var(--c1,#008cff)}
+.ic svg{width:26px;height:26px}
+.card p{margin:8px 0 0;font-size:15.5px}
+.card .was{color:var(--mute);font-size:14.5px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.card .was b{color:var(--ink);font-weight:600}
+/* showcase */
+.split{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:center}
+.split.rev{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+.split.rev .txt{order:2}
+.bul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.bul li{display:flex;gap:12px;align-items:flex-start}
+.bul li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--sun) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%2300175c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.ba{--p:50%;position:relative;aspect-ratio:1800/1344;border-radius:26px;overflow:hidden;box-shadow:var(--sh);background:#9db0a0;user-select:none;touch-action:pan-y}
 .ba .layer{position:absolute;inset:0}
 .ba .layer img,.fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .ba .layer.top{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
 .ba .handle{position:absolute;top:0;bottom:0;left:var(--p);width:0;pointer-events:none}
 .ba .handle::before{content:"";position:absolute;top:0;bottom:0;left:-1.5px;width:3px;background:#fff;box-shadow:0 0 0 1px rgba(13,43,51,.25)}
-.ba .knob{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:#fff;color:#0d2b33;display:grid;place-items:center;font:700 18px var(--display);box-shadow:0 8px 24px rgba(13,43,51,.35)}
+.ba .knob{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:#fff;color:#00175c;display:grid;place-items:center;font:700 18px var(--display);box-shadow:0 8px 24px rgba(13,43,51,.35)}
 .ba .tag{position:absolute;top:14px;font:600 13px var(--body);padding:7px 13px;border-radius:999px;pointer-events:none;background:rgba(255,255,255,.94);color:#0d2b33}
-.ba .tag.l{left:14px}.ba .tag.r{right:14px;background:var(--cta);color:#fff}
+.ba .tag.l{left:14px}.ba .tag.r{right:14px;background:var(--navy);color:#fff}
 .ba .rng{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3}
-.ba:focus-within .knob{outline:3px solid var(--teal);outline-offset:3px}
-.cmp{margin-top:26px;border-top:2px solid var(--ink)}
-.cmp .row{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.25fr);gap:22px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start}
-.cmp .row.hd{padding:12px 0;color:var(--mute);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-.cmp .k{font-family:var(--display);font-weight:700;font-size:19px}
-.cmp .o{color:var(--mute)}
-.cmp .n{font-weight:500;position:relative;padding-left:18px}
-.cmp .n::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--accent)}
-.devices{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1.15fr) minmax(0,1fr);gap:34px;align-items:end;margin-top:30px}
-.dv{margin:0;min-width:0}
-.dv figcaption{margin-top:14px;font-weight:600}.dv figcaption small{display:block;color:var(--mute);font-weight:400}
-.phone .scr{position:relative;aspect-ratio:320/533;border-radius:34px;overflow:hidden;border:9px solid #14262c;background:#14262c;box-shadow:0 26px 50px -24px rgba(13,43,51,.6)}
+.ba:focus-within .knob{outline:3px solid var(--blue);outline-offset:3px}
+.note{color:var(--mute);font-size:14px;margin:12px 4px 2px}
+/* devices */
+.devices{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1.15fr) minmax(0,1fr);gap:34px;align-items:end;margin-top:40px}
+.dv{margin:0;min-width:0;transition:transform .3s}
+.dv:hover{transform:translateY(-6px)}
+.dv figcaption{margin-top:16px;font-weight:700;font-family:var(--display);font-size:18px}.dv figcaption small{display:block;color:var(--mute);font:400 14.5px var(--body)}
+.phone .scr{position:relative;aspect-ratio:320/533;border-radius:34px;overflow:hidden;border:9px solid #0b1640;background:#0b1640;box-shadow:var(--sh)}
 .phone .scr img{object-position:83% 62%}
 .phone .ui{z-index:2;position:absolute;left:10px;right:10px;bottom:10px;background:#fff;color:#0d2b33;border-radius:16px;padding:10px 12px;font-size:13px;line-height:1.3;box-shadow:0 10px 24px rgba(0,0,0,.3)}
 .phone .ui b{display:block;font-family:var(--display);font-size:15px}
-.board .frame{position:relative;padding:14px 14px 18px;border-radius:14px;background:#7a4e2c;box-shadow:inset 0 0 0 3px #9a6a3f,0 26px 50px -24px rgba(13,43,51,.55)}
-.board .ttl{font:700 17px var(--display);color:#fff6e2;text-align:center;padding-bottom:10px;letter-spacing:.01em}
+.board .frame{position:relative;padding:14px 14px 18px;border-radius:14px;background:#7a4e2c;box-shadow:inset 0 0 0 3px #9a6a3f,var(--sh)}
+.board .ttl{font:700 17px var(--display);color:#fff6e2;text-align:center;padding-bottom:10px}
 .board .pic{aspect-ratio:1400/1045;border-radius:8px;overflow:hidden;position:relative}
 .board .legs{display:flex;justify-content:space-between;padding:0 22px}.board .legs i{width:14px;height:34px;background:#5c3a20;display:block}
-.fold .sheet{position:relative;aspect-ratio:1400/1045;border-radius:6px;overflow:hidden;transform:rotate(-2.2deg);box-shadow:0 24px 44px -20px rgba(13,43,51,.55)}
-.fold .sheet::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 32.6%,rgba(0,0,0,.16) 33.3%,rgba(255,255,255,.14) 34%,rgba(255,255,255,0) 66%,rgba(0,0,0,.16) 66.7%,rgba(255,255,255,.14) 67.4%,rgba(255,255,255,0) 100%);pointer-events:none}
-.cfg{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;margin-top:26px;align-items:start}
-.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
-.opt{text-align:left;font:inherit;color:var(--ink);background:var(--panel);border:2px solid var(--line);border-radius:16px;padding:14px 16px 14px 48px;cursor:pointer;position:relative;transition:border-color .15s,background .15s}
-.opt::before{content:"";position:absolute;left:16px;top:17px;width:20px;height:20px;border-radius:6px;border:2px solid var(--line);background:var(--bg)}
-.opt[aria-pressed="true"]{border-color:var(--ink);background:color-mix(in srgb,var(--sun) 22%,var(--panel))}
-.opt[aria-pressed="true"]::before{background:var(--ink);border-color:var(--ink)}
-.opt[aria-pressed="true"]::after{content:"";position:absolute;left:22px;top:21px;width:8px;height:4px;border:solid var(--bg);border-width:0 0 2.5px 2.5px;transform:rotate(-45deg)}
-.opt b{display:block;font-family:var(--display);font-size:17px}
-.opt span{display:block;color:var(--mute);font-size:14px;margin-top:2px}
-.opt:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-.sum{position:sticky;top:12px;background:var(--ink);color:var(--bg);border-radius:20px;padding:22px}
-.sum h3{color:var(--bg)}.sum ul{margin:12px 0 16px;padding-left:18px;color:color-mix(in srgb,var(--bg) 82%,var(--ink))}
-.sum .btn{border-color:var(--bg);background:transparent;color:var(--bg);width:100%}
-@media (max-width:900px){.devices{grid-template-columns:minmax(0,1fr);justify-items:center}.devices .phone{width:min(230px,70%)}.devices .board,.devices .fold{width:100%}.cfg{grid-template-columns:minmax(0,1fr)}.sum{position:static}.cmp .row{grid-template-columns:minmax(0,1fr);gap:6px}.cmp .row.hd{display:none}.cmp .o::before{content:"Today: ";font-weight:600;color:var(--ink)}}
+.fold .sheet{position:relative;aspect-ratio:1400/1045;border-radius:6px;overflow:hidden;transform:rotate(-2.2deg);box-shadow:var(--sh)}
+.fold .sheet::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0,transparent 32.6%,rgba(0,0,0,.16) 33.3%,rgba(255,255,255,.14) 34%,transparent 66%,rgba(0,0,0,.16) 66.7%,rgba(255,255,255,.14) 67.4%,transparent 100%);pointer-events:none}
+/* demo */
+.demo{background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:14px;margin-top:30px;box-shadow:var(--sh)}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:4px 4px 14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:600 14px var(--body);padding:10px 16px;min-height:44px;border-radius:999px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;align-items:start}
+.mapbox{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.side{display:flex;flex-direction:column;gap:10px;min-width:0}
+.info{border:1px solid var(--line);border-radius:16px;padding:14px 16px;min-height:104px;background:linear-gradient(135deg,var(--soft),var(--panel))}
+.info b{font-family:var(--display);font-size:20px;display:block}
+.info span{color:var(--mute);font-size:15px}
+.list{display:flex;flex-direction:column;gap:6px;max-height:300px;overflow:auto}
+.item{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:12px;padding:10px;min-height:44px;font:500 14.5px var(--body);cursor:pointer;transition:background .15s}
+.item:hover{background:var(--soft)}
+.item i{width:12px;height:12px;border-radius:50%;flex:none}
+.item[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
 .rwrap{position:relative;aspect-ratio:1800/1344;background:var(--line);touch-action:none}
-.rpin{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;padding:0;border-radius:50%;border:3px solid #fff;background:var(--c);display:grid;place-items:center;font-size:16px;line-height:1;cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,.35);transition:opacity .2s}
+.rpin{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;padding:0;border-radius:50%;border:3px solid #fff;background:var(--c);display:grid;place-items:center;font-size:16px;line-height:1;cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,.35);transition:opacity .2s,transform .2s}
+.rpin:hover{transform:translate(-50%,-50%) scale(1.15)}
 .rpin .l{position:absolute;top:calc(100% + 5px);left:50%;transform:translateX(-50%);white-space:nowrap;font:700 12px var(--body);background:#fff;color:#0d2b33;padding:3px 9px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.25);display:none;pointer-events:none}
 .rpin:hover .l,.rpin.sel .l,.rpin:focus-visible .l{display:block}
-.rpin.sel{outline:3px solid #0d2b33;z-index:2}
-.rpin:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.rpin.sel{outline:3px solid #00175c;z-index:2}
 .rcal{width:100%;font:12px ui-monospace,monospace;border:0;border-top:1px solid var(--line);padding:8px;background:var(--panel);color:var(--ink)}
-@media (max-width:600px){.rpin{width:28px;height:28px;font-size:13px}}
-@media (max-width:760px){.nl{display:none}.mm{display:block}nav{gap:8px}header{gap:10px;padding-block:14px}.logo{font-size:20px}.hd-cta{padding:12px 14px;min-height:44px;display:flex;align-items:center}}
+/* steps */
+.steps{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;position:relative}
+.steps::before{content:"";position:absolute;top:34px;left:12%;right:12%;border-top:3px dashed color-mix(in srgb,var(--blue) 55%,transparent)}
+.steps li{position:relative;text-align:center;padding:0 6px}
+.steps .sn{position:relative;width:68px;height:68px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:var(--panel);border:3px solid var(--blue);color:var(--navy);box-shadow:0 12px 24px -12px rgba(0,140,255,.7);transition:transform .2s}
+.steps li:hover .sn{transform:scale(1.08) rotate(-4deg)}
+.steps .sn svg{width:28px;height:28px}
+.steps .sn b{position:absolute;top:-6px;right:-6px;width:26px;height:26px;border-radius:50%;background:var(--sun);color:#00175c;font:700 13px var(--display);display:grid;place-items:center}
+.steps p{margin:8px 0 0;color:var(--mute);font-size:15.5px}
+/* packages */
+.pk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:40px;align-items:stretch}
+.tier{position:relative;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:30px 26px 26px;transition:transform .2s,box-shadow .2s}
+.tier:hover{transform:translateY(-6px);box-shadow:var(--sh)}
+.tier .tn{font:700 24px var(--display)}
+.tier .td{color:var(--mute);font-size:15px;margin:6px 0 0;min-height:48px}
+.tier .pr{margin:18px 0 4px;font:700 52px/1 var(--display);letter-spacing:-.03em}
+.tier .pr small{font:500 15px var(--body);color:var(--mute);letter-spacing:0;margin-left:6px}
+.tier ul{list-style:none;padding:18px 0 0;margin:18px 0 24px;border-top:1px solid var(--line);display:grid;gap:11px;flex:1}
+.tier li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.45}
+.tier li svg{flex:none;width:20px;height:20px;margin-top:1px;color:var(--blue-ink)}
+.tier li.inh{font-weight:700}
+.tier .btn{width:100%}
+.tier.rec{background:radial-gradient(80% 60% at 100% 0,rgba(0,140,255,.45),transparent 70%),linear-gradient(160deg,#00175c,#002a8f);color:#fff;border-color:transparent;box-shadow:var(--sh)}
+.tier.rec .td,.tier.rec .pr small{color:#c7d6ff}
+.tier.rec ul{border-color:rgba(255,255,255,.2)}
+.tier.rec li svg{color:var(--sun)}
+.tier .badge{position:absolute;top:-14px;left:26px;background:var(--sun);color:#00175c;font:700 12px var(--body);letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.tier .btn.out{border-color:var(--ink);color:var(--ink)}
+.addons{margin-top:28px;background:var(--panel);border:1px dashed color-mix(in srgb,var(--blue) 60%,var(--line));border-radius:22px;padding:22px 24px;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:18px;align-items:center}
+.addons h3{font-size:20px}.addons h3 small{display:block;font:500 14px var(--body);color:var(--mute);margin-top:4px}
+.addons .chip[aria-pressed="true"]::before{content:"✓ "}
+.pnote{color:var(--mute);font-size:15px;margin:18px 0 0}
+/* faq */
+.faq{margin-top:30px;max-width:860px;display:grid;gap:12px}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:0 20px;transition:box-shadow .2s}
+.faq details[open]{box-shadow:var(--sh)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 40px 18px 0;position:relative;font:700 18px/1.3 var(--display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:13px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:500 22px var(--body);color:#fff;background:var(--navy);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:0 0 18px;color:var(--mute);font-size:16px;max-width:70ch}
+/* contact */
+.contact{position:relative;overflow:hidden;color:#fff;border-radius:30px;padding:clamp(24px,4.5vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;background:radial-gradient(60% 80% at 100% 0,rgba(0,140,255,.5),transparent 70%),radial-gradient(50% 60% at 0 100%,rgba(255,90,60,.25),transparent 70%),linear-gradient(160deg,#00175c,#002a8f)}
+.contact h2{color:#fff}.contact p{color:#c7d6ff}
+.contact p a{color:#fff}
+.contact textarea,.contact input{width:100%;font:16px var(--body);padding:12px;border-radius:12px;border:2px solid transparent;background:#fff;color:#0d2b33;margin-top:8px}
+.contact label{font-size:14px;font-weight:600;display:block;margin-top:12px}
+.contact .btn.pri{margin-top:14px}
+.contact .sel{display:inline-block;margin-top:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:14px}
+.status{font-size:14px;margin-top:8px;min-height:20px}
+footer{padding-block:32px 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line);margin-top:56px}
+footer a{color:inherit;margin-inline-start:14px;display:inline-block;padding-block:6px}
+.legal{padding-block:28px 0;max-width:760px;font-size:15px;color:var(--mute)}.legal h2{font-size:22px;margin-bottom:10px;color:var(--ink)}.legal p{margin-top:10px}
+.divider{display:block;width:min(560px,80%);height:40px;margin:0 auto;color:var(--blue)}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:980px){.hero .w{grid-template-columns:minmax(0,1fr)}.hv{justify-self:center;max-width:520px;margin-top:10px}.split,.split.rev{grid-template-columns:minmax(0,1fr)}.split.rev .txt{order:0}.pk{grid-template-columns:minmax(0,1fr);max-width:520px;margin-inline:auto}.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:36px}.steps::before{display:none}}
+@media (max-width:900px){.devices{grid-template-columns:minmax(0,1fr);justify-items:center}.devices .phone{width:min(230px,70%)}.devices .board,.devices .fold{width:100%}.addons{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:860px){.stage{grid-template-columns:minmax(0,1fr)}.list{max-height:none}}
+@media (max-width:760px){.nl{display:none}.mm{display:block}nav{gap:8px}header .w{gap:10px;padding-block:14px}.logo{font-size:20px}.hd-cta{padding:12px 14px;min-height:44px;display:flex;align-items:center}.hero{padding:96px 0 90px}.fb{font-size:13px;padding:7px 12px 7px 8px}.fb i{width:24px;height:24px}}
+@media (max-width:600px){.rpin{width:28px;height:28px;font-size:13px}.steps{grid-template-columns:minmax(0,1fr)}.wave{height:40px}}
 @media (max-width:360px){.logo{font-size:18px}.logo svg{width:24px;height:24px}.hd-cta{padding:12px 10px;font-size:13px}.mm summary{padding:10px 9px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}.js .rv{opacity:1;transform:none}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.map2follow.com/#org", "name": "Map2follow", "url": "https://www.map2follow.com/", "logo": "https://www.map2follow.com/img/icon-512.png", "email": "map2follow@gmail.com", "telephone": "+41 77 232 93 94", "address": {"@type": "PostalAddress", "streetAddress": "Staffeleggweg 9", "postalCode": "5033", "addressLocality": "Buchs AG", "addressCountry": "CH"}, "sameAs": ["https://www.map2follow.ch/"]}, {"@type": "WebSite", "@id": "https://www.map2follow.com/#website", "url": "https://www.map2follow.com/", "name": "Map2follow", "inLanguage": "en-US", "publisher": {"@id": "https://www.map2follow.com/#org"}}, {"@type": "Service", "@id": "https://www.map2follow.com/#service", "name": "Custom illustrated park maps", "serviceType": "Park map design", "provider": {"@id": "https://www.map2follow.com/#org"}, "description": "Custom illustrated 2D maps for amusement parks, safari and drive-thru parks, waterparks and adventure parks, for entrance boards, folding maps and digital use.", "areaServed": {"@type": "Country", "name": "United States"}, "offers": {"@type": "Offer", "url": "https://www.map2follow.com/#contact", "priceCurrency": "USD", "priceSpecification": {"@type": "PriceSpecification", "minPrice": 299, "maxPrice": 499, "priceCurrency": "USD", "description": "Per park map, depending on size and special requests"}}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a custom park map cost?", "acceptedAnswer": {"@type": "Answer", "text": "Pricing is $299–$499 per park map, depending on the size of your park and your special requests. You receive a quote tailored to your park before any work starts."}}, {"@type": "Question", "name": "Which types of parks do you design maps for?", "acceptedAnswer": {"@type": "Answer", "text": "Amusement and theme parks, safari and drive-thru parks, zoos and wildlife parks, waterparks and adventure parks such as zipline, ropes or go-kart parks. Every map is designed from your own grounds, attractions and branding."}}, {"@type": "Question", "name": "What do you need from us to get started?", "acceptedAnswer": {"@type": "Answer", "text": "Your current map or site plan (a screenshot or photo is enough), a short description of what should be improved, and your logo or brand colors if you have them."}}, {"@type": "Question", "name": "How does the process work?", "acceptedAnswer": {"@type": "Answer", "text": "You send us your current map and your wishes, we send you a quote, and once you approve it, we design the map and deliver it in the formats you need."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the size of your park and the options you choose. We confirm the timeline together with your quote."}}, {"@type": "Question", "name": "Which formats do we receive?", "acceptedAnswer": {"@type": "Answer", "text": "One design covers every use you choose: a large entrance board, a folding map to take along, and a digital version for your website, app and screens in the park."}}, {"@type": "Question", "name": "Can we request changes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You review the design before final delivery, and the feedback rounds are agreed in your quote."}}, {"@type": "Question", "name": "Can you make seasonal or Spanish versions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Four seasonal versions and multiple languages, for example English and Spanish, are optional add-ons in the package builder above."}}, {"@type": "Question", "name": "Is there any obligation when we ask for a quote?", "acceptedAnswer": {"@type": "Answer", "text": "No. A quote request is free and without obligation."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.map2follow.com/#org", "name": "Map2follow", "url": "https://www.map2follow.com/", "logo": "https://www.map2follow.com/img/icon-512.png", "email": "map2follow@gmail.com", "telephone": "+41 77 232 93 94", "address": {"@type": "PostalAddress", "streetAddress": "Staffeleggweg 9", "postalCode": "5033", "addressLocality": "Buchs AG", "addressCountry": "CH"}, "sameAs": ["https://www.map2follow.ch/"]}, {"@type": "WebSite", "@id": "https://www.map2follow.com/#website", "url": "https://www.map2follow.com/", "name": "Map2follow", "inLanguage": "en-US", "publisher": {"@id": "https://www.map2follow.com/#org"}}, {"@type": "Service", "@id": "https://www.map2follow.com/#service", "name": "Custom illustrated park maps", "serviceType": "Park map design", "provider": {"@id": "https://www.map2follow.com/#org"}, "description": "Custom illustrated 2D maps for amusement parks, safari and drive-thru parks, waterparks and adventure parks, for entrance boards, folding maps and digital use.", "areaServed": {"@type": "Country", "name": "United States"}, "offers": {"@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": 299, "highPrice": 499, "offerCount": 3, "url": "https://www.map2follow.com/#packages", "offers": [{"@type": "Offer", "name": "Essential package", "price": 299, "priceCurrency": "USD", "description": "Custom illustrated 2D map of your park; Up to 15 labeled points of interest; Print-ready PDF; Web images (PNG/JPG); 2 revision rounds", "url": "https://www.map2follow.com/#packages"}, {"@type": "Offer", "name": "Signature package", "price": 399, "priceCurrency": "USD", "description": "Everything in Essential; Up to 30 labeled points of interest; Legend and icons for facilities: restrooms, food, first aid, parking; Print-ready large format for signage; Folding brochure version; Mobile-optimized web version; 3 revision rounds", "url": "https://www.map2follow.com/#packages"}, {"@type": "Offer", "name": "Premium package", "price": 499, "priceCurrency": "USD", "description": "Everything in Signature; Bilingual version, for example English and Spanish; Interactive web map with clickable pins, like the demo above; One seasonal or event variant; Source files; Priority handling", "url": "https://www.map2follow.com/#packages"}]}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a custom park map cost?", "acceptedAnswer": {"@type": "Answer", "text": "We offer three packages: Essential for $299, Signature for $399 and Premium for $499 per park map. The final price depends on the size of your park and your special requests, and is confirmed in your quote before any work starts."}}, {"@type": "Question", "name": "Which package is right for our park?", "acceptedAnswer": {"@type": "Answer", "text": "Essential suits smaller parks with up to 15 labeled points. Signature adds up to 30 points, a facility legend, signage and folding map files and a mobile web version, which is why we recommend it for most parks. Premium adds a bilingual version, an interactive web map, a seasonal or event variant and the source files."}}, {"@type": "Question", "name": "Which types of parks do you design maps for?", "acceptedAnswer": {"@type": "Answer", "text": "Amusement and theme parks, safari and drive-thru parks, zoos and wildlife parks, waterparks and adventure parks such as zipline, ropes or go-kart parks. Every map is designed from your own grounds, attractions and branding."}}, {"@type": "Question", "name": "What do you need from us to get started?", "acceptedAnswer": {"@type": "Answer", "text": "Your current map or site plan (a screenshot or photo is enough), a short description of what should be improved, and your logo or brand colors if you have them."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the size of your park and the package you choose. We confirm the timeline together with your quote. Premium includes priority handling."}}, {"@type": "Question", "name": "How many revisions are included?", "acceptedAnswer": {"@type": "Answer", "text": "Essential includes 2 revision rounds, Signature and Premium include 3 revision rounds."}}, {"@type": "Question", "name": "Which file formats do we receive?", "acceptedAnswer": {"@type": "Answer", "text": "Every package includes a print-ready PDF and web images (PNG/JPG). Signature adds large-format files for signage, a folding brochure version and a mobile-optimized web version. Premium also includes the source files."}}, {"@type": "Question", "name": "Can you make Spanish or seasonal versions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Premium includes a bilingual version (for example English and Spanish) and one seasonal or event variant. Additional languages and seasonal versions are available as add-ons, priced on request."}}, {"@type": "Question", "name": "Is there any obligation when we ask for a quote?", "acceptedAnswer": {"@type": "Answer", "text": "No. A quote request is free and without obligation."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="w">
-<header>
+<header><div class="w">
   <a class="logo" href="./" aria-label="Map2follow home"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#ff5a3c"/><path d="M7 21 C11 9 15 23 19 12 S25 14 25 14" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="1 5"/><circle cx="25" cy="14" r="3" fill="#ffc43d"/></svg>Map2follow</a>
-  <nav aria-label="Main navigation"><div class="nl"><a href="#upgrade">The upgrade</a><a href="#uses">Uses</a><a href="#explore">Explore the map</a><a href="#package">Pricing</a><a href="#faq">FAQ</a></div><details class="mm"><summary aria-label="Open menu">Menu</summary><div class="mmp"><a href="#upgrade">The upgrade</a><a href="#uses">Uses</a><a href="#explore">Explore the map</a><a href="#package">Pricing</a><a href="#faq">FAQ</a></div></details><a class="hd-cta" href="#contact">Request a quote</a></nav>
-</header>
+  <nav aria-label="Main navigation"><div class="nl"><a href="#why">Why upgrade</a><a href="#showcase">Showcase</a><a href="#explore">Demo</a><a href="#packages">Packages</a><a href="#faq">FAQ</a></div><details class="mm"><summary aria-label="Open menu">Menu</summary><div class="mmp"><a href="#why">Why upgrade</a><a href="#showcase">Showcase</a><a href="#explore">Demo</a><a href="#packages">Packages</a><a href="#faq">FAQ</a></div></details><a class="hd-cta" href="#contact">Request a quote</a></nav>
+</div></header>
 
 <main id="main">
 <div class="hero">
-  <div class="eyebrow">For amusement, safari, water and adventure parks</div>
-  <h1>Custom illustrated maps for your park</h1>
-  <p class="lead">A map becomes an experience. Same park, same content, but a map your guests enjoy looking at, take home, and use to find their way right away, whether you run an amusement park, a safari or drive-thru park, a waterpark or an adventure park.</p>
-  <p class="price"><strong>$299–$499 per park map</strong>, depending on size and special requests.</p>
-  <div class="btns"><a class="btn pri" href="#contact">Request a quote</a><a class="tl" href="#package">See what's included</a></div>
-  <div class="ba real" id="ba">
-    <div class="layer"><picture><source type="image/webp" srcset="img/map-photo-800.webp 800w, img/map-photo-1200.webp 1200w, img/map-photo-1800.webp 1800w" sizes="(max-width:1152px) calc(100vw - 32px), 1120px"><img src="img/map-photo-1200.jpg" srcset="img/map-photo-800.jpg 800w, img/map-photo-1200.jpg 1200w, img/map-photo-1800.jpg 1800w" sizes="(max-width:1152px) calc(100vw - 32px), 1120px" width="1800" height="1344" alt="Example park as a photorealistic Map2follow map" class="fill" decoding="async" fetchpriority="high"></picture></div>
-    <div class="layer top"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="(max-width:1152px) calc(100vw - 32px), 1120px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="(max-width:1152px) calc(100vw - 32px), 1120px" width="1400" height="1045" alt="The same example park as an illustrated Map2follow map" class="fill" decoding="async"></picture></div>
-    <div class="handle"><div class="knob" aria-hidden="true">&#8596;</div></div>
-    <span class="tag l">Illustrated</span><span class="tag r">Photorealistic</span>
-    <input class="rng" id="baR" type="range" min="3" max="97" value="50" aria-label="Compare the illustrated and the photorealistic map style">
+  <div class="w">
+    <div class="hx">
+      <div class="eyebrow">For amusement, safari, water and adventure parks</div>
+      <h1>Custom illustrated <em>park maps</em> your guests love to follow</h1>
+      <p class="lead">A map becomes an experience. Same park, same content, but a map your guests enjoy looking at, take home, and use to find their way right away.</p>
+      <div class="pricechip"><strong>$299–$499</strong><span>per park map · three packages</span></div>
+      <div class="btns"><a class="btn pri" href="#contact">Request a quote <span class="ar" aria-hidden="true">→</span></a><a class="tl-light" href="#packages">Compare packages</a></div>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Print, signage and web from one design</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>English and Spanish versions</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Revision rounds included</li>
+      </ul>
+    </div>
+    <div class="hv" id="hv" aria-hidden="true">
+      <div class="pl c2"><picture><source type="image/webp" srcset="img/map-photo-800.webp 800w, img/map-photo-1200.webp 1200w, img/map-photo-1800.webp 1800w" sizes="280px"><img src="img/map-photo-1200.jpg" srcset="img/map-photo-800.jpg 800w, img/map-photo-1200.jpg 1200w, img/map-photo-1800.jpg 1800w" sizes="280px" width="1800" height="1344" alt="" class="fill" decoding="async"></picture><span>Photorealistic style</span></div>
+      <div class="pl c1"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="(max-width:980px) min(520px, calc(100vw - 32px)), 560px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="(max-width:980px) min(520px, calc(100vw - 32px)), 560px" width="1400" height="1045" alt="" class="fill" decoding="async" fetchpriority="high"></picture></div>
+      <svg class="pl trailsvg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M54 70 C 48 60, 40 58, 44 46 S 40 30, 40 24" fill="none" stroke="#ff4f6d" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke" style="stroke-width:5px"/></svg>
+      <div class="pl fb a"><i>🎢</i>Rides</div>
+      <div class="pl fb b"><i>🍔</i>Food and drinks</div>
+      <div class="pl fb c"><i>🚻</i>Restrooms</div>
+    </div>
   </div>
-  <p class="note">Drag the slider: the same example park as an illustrated map on the left and in the optional photorealistic style on the right. Example park with fictional places.</p>
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 80, 480 0, 720 30 S 1200 70, 1440 24 V70 H0Z"/></svg>
 </div>
 
-<section id="upgrade">
+<section id="why"><div class="w">
   <div class="eyebrow">The upgrade</div>
-  <h2>What changes for your guests</h2>
-  <div class="cmp">
-    <div class="row hd"><div></div><div>Today</div><div>With Map2follow</div></div>
-    <div class="row"><div class="k">Orientation</div><div class="o">Guests search, ask for directions at the entrance and turn the map in circles.</div><div class="n">Attractions, food and restrooms are instantly recognizable by symbols and colors.</div></div>
-    <div class="row"><div class="k">Impact</div><div class="o">A plain site plan that gets thrown away after the visit.</div><div class="n">An illustrated map that builds excitement for the day and invites guests to keep it.</div></div>
-    <div class="row"><div class="k">Through the year</div><div class="o">One map for every season, even though the park looks completely different in winter.</div><div class="n">Optional seasonal versions: spring, summer, fall and winter, matching the mood of the park.</div></div>
-    <div class="row"><div class="k">Uses</div><div class="o">Usually only a printout at the entrance.</div><div class="n">Entrance board, folding map, website and phone from one design, in a consistent look.</div></div>
-    <div class="row"><div class="k">Impression</div><div class="o">The map looks outdated and does not match your attractions.</div><div class="n">The map shows the quality guests can expect in the park.</div></div>
+  <h2 class="rv">What changes for your guests</h2>
+  <p class="lead rv">A good park map does more than show the way. It sets the mood before the first ride.</p>
+  <div class="grid4">
+    <article class="card rv"><div class="ic" style="--c1:#008cff;--c2:#00175c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div><h3>Orientation at a glance</h3><p>Attractions, food and restrooms are instantly recognizable by symbols and colors.</p><p class="was"><b>Today:</b> Guests ask for directions and turn the map in circles.</p></article>
+    <article class="card rv"><div class="ic" style="--c1:#ff5a3c;--c2:#c83c24"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg></div><h3>A map guests keep</h3><p>An illustrated map that builds excitement for the day and invites guests to take it home.</p><p class="was"><b>Today:</b> A plain site plan that gets thrown away after the visit.</p></article>
+    <article class="card rv"><div class="ic" style="--c1:#1fb26b;--c2:#0f7a4d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></svg></div><h3>Ready for every season</h3><p>Optional seasonal and event versions that match the mood of your park.</p><p class="was"><b>Today:</b> One map all year, even though the park looks different in winter.</p></article>
+    <article class="card rv"><div class="ic" style="--c1:#9a5fe0;--c2:#5b2fa8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></div><h3>One design, every format</h3><p>Entrance board, folding map, website and phone in one consistent look.</p><p class="was"><b>Today:</b> Usually only a printout at the entrance.</p></article>
   </div>
-</section>
+</div></section>
 
-<section id="uses">
+<svg class="divider" viewBox="0 0 560 40" aria-hidden="true"><path d="M10 28 C 90 2, 170 38, 250 18 S 410 4, 490 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10" opacity=".55"/><circle cx="10" cy="28" r="5" fill="#ffc43d"/><path d="M520 30c0-9-14-9-14 0 0 6 7 12 7 12s7-6 7-12z" fill="#ff5a3c" transform="translate(-8 -14)"/></svg>
+
+<section id="showcase"><div class="w split">
+  <div class="txt rv">
+    <div class="eyebrow">Showcase</div>
+    <h2>One park, two styles</h2>
+    <p class="lead">Every package is drawn as an illustrated map. If you prefer a realistic bird's-eye view, the photorealistic style is available on request.</p>
+    <ul class="bul">
+      <li>Your grounds, attractions and branding, not a template</li>
+      <li>Clear symbols and colors for rides, food and services</li>
+      <li>Readable on a large board and on a small phone</li>
+    </ul>
+  </div>
+  <div class="rv">
+    <div class="ba" id="ba">
+      <div class="layer"><picture><source type="image/webp" srcset="img/map-photo-800.webp 800w, img/map-photo-1200.webp 1200w, img/map-photo-1800.webp 1800w" sizes="(max-width:980px) calc(100vw - 32px), 640px"><img src="img/map-photo-1200.jpg" srcset="img/map-photo-800.jpg 800w, img/map-photo-1200.jpg 1200w, img/map-photo-1800.jpg 1800w" sizes="(max-width:980px) calc(100vw - 32px), 640px" width="1800" height="1344" alt="Example park as a photorealistic Map2follow map" class="fill" decoding="async" loading="lazy"></picture></div>
+      <div class="layer top"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="(max-width:980px) calc(100vw - 32px), 640px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="(max-width:980px) calc(100vw - 32px), 640px" width="1400" height="1045" alt="The same example park as an illustrated Map2follow map" class="fill" decoding="async" loading="lazy"></picture></div>
+      <div class="handle"><div class="knob" aria-hidden="true">&#8596;</div></div>
+      <span class="tag l">Illustrated</span><span class="tag r">Photorealistic</span>
+      <input class="rng" id="baR" type="range" min="3" max="97" value="50" aria-label="Compare the illustrated and the photorealistic map style">
+    </div>
+    <p class="note">Drag the slider. Example park with fictional places.</p>
+  </div>
+</div></section>
+
+<section id="uses" class="band-soft"><div class="w">
   <div class="eyebrow">Uses</div>
-  <h2>One map, everywhere in the park</h2>
-  <p class="lead">One design produces every format. Guests recognize your park on the entrance board, in the folding map and on their phone.</p>
+  <h2 class="rv">One map, everywhere in the park</h2>
+  <p class="lead rv">One design produces every format. Guests recognize your park on the entrance board, in the folding map and on their phone.</p>
   <div class="devices">
-    <figure class="dv phone"><div class="scr"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="520px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="520px" width="1400" height="1045" alt="Illustrated example map on a phone screen" class="fill" decoding="async" loading="lazy"></picture><div class="ui"><b>🚠 Cable car</b>Base station at the east end of the park.</div></div><figcaption>On the phone<small>tap a place to find it</small></figcaption></figure>
-    <figure class="dv board"><div class="frame"><div class="ttl">Welcome to the example park</div><div class="pic"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="(max-width:900px) calc(100vw - 60px), 420px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="(max-width:900px) calc(100vw - 60px), 420px" width="1400" height="1045" alt="Illustrated example map on an entrance board" class="fill" decoding="async" loading="lazy"></picture></div></div><div class="legs"><i></i><i></i></div><figcaption>Entrance board<small>large, for the entrance and signposts</small></figcaption></figure>
-    <figure class="dv fold"><div class="sheet"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="(max-width:900px) calc(100vw - 32px), 380px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="(max-width:900px) calc(100vw - 32px), 380px" width="1400" height="1045" alt="Illustrated example map as a folding map" class="fill" decoding="async" loading="lazy"></picture></div><figcaption>Folding map<small>handy version to take along</small></figcaption></figure>
+    <figure class="dv phone rv"><div class="scr"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="520px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="520px" width="1400" height="1045" alt="Illustrated example map on a phone screen" class="fill" decoding="async" loading="lazy"></picture><div class="ui"><b>🚠 Cable car</b>Base station at the east end of the park.</div></div><figcaption>On the phone<small>tap a place to find it</small></figcaption></figure>
+    <figure class="dv board rv"><div class="frame"><div class="ttl">Welcome to the example park</div><div class="pic"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="(max-width:900px) calc(100vw - 60px), 420px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="(max-width:900px) calc(100vw - 60px), 420px" width="1400" height="1045" alt="Illustrated example map on an entrance board" class="fill" decoding="async" loading="lazy"></picture></div></div><div class="legs"><i></i><i></i></div><figcaption>Entrance board<small>large, for the entrance and signposts</small></figcaption></figure>
+    <figure class="dv fold rv"><div class="sheet"><picture><source type="image/webp" srcset="img/map-illustrated-800.webp 800w, img/map-illustrated-1200.webp 1200w, img/map-illustrated-1400.webp 1400w" sizes="(max-width:900px) calc(100vw - 32px), 380px"><img src="img/map-illustrated-1200.jpg" srcset="img/map-illustrated-800.jpg 800w, img/map-illustrated-1200.jpg 1200w, img/map-illustrated-1400.jpg 1400w" sizes="(max-width:900px) calc(100vw - 32px), 380px" width="1400" height="1045" alt="Illustrated example map as a folding map" class="fill" decoding="async" loading="lazy"></picture></div><figcaption>Folding map<small>handy version to take along</small></figcaption></figure>
   </div>
-</section>
+</div></section>
 
-<section id="explore">
-  <div class="eyebrow">Try it out</div>
-  <h2>The map to click</h2>
-  <p class="lead">Filter by rides, food or service and tap a place. This is what your map could look like.</p>
-  <div class="demo" style="margin-top:22px">
+<section id="explore"><div class="w">
+  <div class="eyebrow">Interactive demo</div>
+  <h2 class="rv">The map to click</h2>
+  <p class="lead rv">Filter by rides, food or service and tap a place. Premium includes an interactive web map like this one.</p>
+  <div class="demo rv">
     <div class="bar"><div class="chips" id="cats" role="group" aria-label="Category"></div></div>
     <div class="stage">
       <div class="mapbox"><div class="rwrap" id="rwrap"><picture><source type="image/webp" srcset="img/map-photo-800.webp 800w, img/map-photo-1200.webp 1200w, img/map-photo-1800.webp 1800w" sizes="(max-width:860px) calc(100vw - 64px), 810px"><img src="img/map-photo-1200.jpg" srcset="img/map-photo-800.jpg 800w, img/map-photo-1200.jpg 1200w, img/map-photo-1800.jpg 1800w" sizes="(max-width:860px) calc(100vw - 64px), 810px" width="1800" height="1344" alt="Interactive example park map, photorealistic style" class="fill" decoding="async" loading="lazy"></picture></div><textarea id="rcal" class="rcal" rows="3" readonly hidden aria-label="Pin coordinates"></textarea></div>
@@ -244,69 +340,94 @@ footer a{color:inherit;margin-inline-start:14px;display:inline-block;padding-blo
     </div>
     <p class="note">Example park with fictional places. Your map is built from your grounds, your attractions and your branding.</p>
   </div>
-</section>
+</div></section>
 
-<section id="package">
-  <div class="eyebrow">Your package</div>
-  <h2>Build your upgrade</h2>
-  <p class="lead">Choose what your map should do. We turn it into a quote that fits your park.</p>
-  <p class="price">Pricing is $299–$499 per park map, depending on size and special requests. <a href="#contact">Request a quote</a></p>
-  <div class="cfg">
-    <div class="opts" id="opts"></div>
-    <aside class="sum" aria-live="polite"><h3>Your upgrade</h3><ul id="sumL"></ul><button class="btn" type="button" id="sumB">Add to request</button></aside>
-  </div>
-</section>
-
-<section id="process">
-  <div class="eyebrow">Process</div>
-  <h2>Three steps to your quote</h2>
+<section id="process" class="band-white"><div class="w">
+  <div class="eyebrow">How it works</div>
+  <h2 class="rv">From your current map to the new one</h2>
   <ol class="steps">
-    <li><h3>Send your map</h3><p>Show us what you want improved or redone. A screenshot or photo is enough.</p></li>
-    <li><h3>Receive a quote</h3><p>We review your wishes and send you a quote tailored to you.</p></li>
-    <li><h3>Delivery</h3><p>Once you approve, we design the map and deliver it in the formats you need.</p></li>
+    <li class="rv"><div class="sn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 001 1h14a1 1 0 001-1v-3"/></svg><b>1</b></div><h3>Send your map</h3><p>Share your current map or site plan. A screenshot or photo is enough.</p></li>
+    <li class="rv"><div class="sn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg><b>2</b></div><h3>Pick a package</h3><p>We review your wishes and confirm the package and price in your quote.</p></li>
+    <li class="rv"><div class="sn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg><b>3</b></div><h3>Design and feedback</h3><p>We design your map and refine it with you in the included revision rounds.</p></li>
+    <li class="rv"><div class="sn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg><b>4</b></div><h3>Delivery</h3><p>You receive the files for print, signage and web, ready to use.</p></li>
   </ol>
-</section>
+</div></section>
 
-<section id="faq">
-  <div class="eyebrow">FAQ</div>
-  <h2>Questions about your park map</h2>
-  <div class="faq">
-    <details><summary>What does a custom park map cost?</summary><p>Pricing is $299–$499 per park map, depending on the size of your park and your special requests. You receive a quote tailored to your park before any work starts.</p></details>
-    <details><summary>Which types of parks do you design maps for?</summary><p>Amusement and theme parks, safari and drive-thru parks, zoos and wildlife parks, waterparks and adventure parks such as zipline, ropes or go-kart parks. Every map is designed from your own grounds, attractions and branding.</p></details>
-    <details><summary>What do you need from us to get started?</summary><p>Your current map or site plan (a screenshot or photo is enough), a short description of what should be improved, and your logo or brand colors if you have them.</p></details>
-    <details><summary>How does the process work?</summary><p>You send us your current map and your wishes, we send you a quote, and once you approve it, we design the map and deliver it in the formats you need.</p></details>
-    <details><summary>How long does it take?</summary><p>It depends on the size of your park and the options you choose. We confirm the timeline together with your quote.</p></details>
-    <details><summary>Which formats do we receive?</summary><p>One design covers every use you choose: a large entrance board, a folding map to take along, and a digital version for your website, app and screens in the park.</p></details>
-    <details><summary>Can we request changes?</summary><p>Yes. You review the design before final delivery, and the feedback rounds are agreed in your quote.</p></details>
-    <details><summary>Can you make seasonal or Spanish versions?</summary><p>Yes. Four seasonal versions and multiple languages, for example English and Spanish, are optional add-ons in the package builder above.</p></details>
-    <details><summary>Is there any obligation when we ask for a quote?</summary><p>No. A quote request is free and without obligation.</p></details>
+<section id="packages"><div class="w">
+  <div class="eyebrow">Packages</div>
+  <h2 class="rv">Choose your map</h2>
+  <p class="lead rv">Three packages that Map2follow designs and delivers for your park. Pick one as a starting point; we confirm everything in your quote.</p>
+  <div class="pk">
+    <article class="tier rv" aria-labelledby="t-essential">
+      <h3 class="tn" id="t-essential">Essential</h3><p class="td">A clear, custom illustrated map for smaller parks.</p>
+      <p class="pr">$299<small>per park map</small></p>
+      <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Custom illustrated 2D map of your park</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Up to 15 labeled points of interest</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Print-ready PDF</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Web images (PNG/JPG)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>2 revision rounds</span></li></ul>
+      <a class="btn out" href="#contact" data-pkg="Essential" data-price="299" aria-label="Request a quote for the Essential package">Request a quote <span class="ar" aria-hidden="true">→</span></a>
+    </article>
+    <article class="tier rec rv" aria-labelledby="t-signature"><span class="badge">Recommended</span>
+      <h3 class="tn" id="t-signature">Signature</h3><p class="td">The complete map for signage, print and phones.</p>
+      <p class="pr">$399<small>per park map</small></p>
+      <ul><li class="inh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Everything in Essential</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Up to 30 labeled points of interest</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Legend and icons for facilities: restrooms, food, first aid, parking</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Print-ready large format for signage</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Folding brochure version</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Mobile-optimized web version</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>3 revision rounds</span></li></ul>
+      <a class="btn pri" href="#contact" data-pkg="Signature" data-price="399" aria-label="Request a quote for the Signature package">Request a quote <span class="ar" aria-hidden="true">→</span></a>
+    </article>
+    <article class="tier rv" aria-labelledby="t-premium">
+      <h3 class="tn" id="t-premium">Premium</h3><p class="td">Every format, two languages and an interactive map.</p>
+      <p class="pr">$499<small>per park map</small></p>
+      <ul><li class="inh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Everything in Signature</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Bilingual version, for example English and Spanish</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Interactive web map with clickable pins, like the demo above</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>One seasonal or event variant</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Source files</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Priority handling</span></li></ul>
+      <a class="btn out" href="#contact" data-pkg="Premium" data-price="499" aria-label="Request a quote for the Premium package">Request a quote <span class="ar" aria-hidden="true">→</span></a>
+    </article>
   </div>
-</section>
+  <div class="addons rv">
+    <h3>Add-ons<small>Price on request</small></h3>
+    <div class="chips" role="group" aria-label="Add-ons, price on request"><button type="button" class="chip addon" aria-pressed="false">Additional language</button><button type="button" class="chip addon" aria-pressed="false">Extra seasonal versions</button><button type="button" class="chip addon" aria-pressed="false">Large-format signage files</button><button type="button" class="chip addon" aria-pressed="false">Brochure layout</button><button type="button" class="chip addon" aria-pressed="false">Photorealistic style</button><button type="button" class="chip addon" aria-pressed="false">Map updates when new attractions open</button></div>
+  </div>
+  <p class="pnote">Final price depends on park size and special requests — confirmed in your quote.</p>
+</div></section>
 
-<section id="contact">
-  <div class="contact">
+<svg class="divider" viewBox="0 0 560 40" aria-hidden="true"><path d="M10 28 C 90 2, 170 38, 250 18 S 410 4, 490 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10" opacity=".55"/><circle cx="10" cy="28" r="5" fill="#ffc43d"/><path d="M520 30c0-9-14-9-14 0 0 6 7 12 7 12s7-6 7-12z" fill="#ff5a3c" transform="translate(-8 -14)"/></svg>
+
+<section id="faq"><div class="w">
+  <div class="eyebrow">FAQ</div>
+  <h2 class="rv">Questions about your park map</h2>
+  <div class="faq">
+    <details class="rv"><summary>What does a custom park map cost?</summary><p>We offer three packages: Essential for $299, Signature for $399 and Premium for $499 per park map. The final price depends on the size of your park and your special requests, and is confirmed in your quote before any work starts.</p></details>
+    <details class="rv"><summary>Which package is right for our park?</summary><p>Essential suits smaller parks with up to 15 labeled points. Signature adds up to 30 points, a facility legend, signage and folding map files and a mobile web version, which is why we recommend it for most parks. Premium adds a bilingual version, an interactive web map, a seasonal or event variant and the source files.</p></details>
+    <details class="rv"><summary>Which types of parks do you design maps for?</summary><p>Amusement and theme parks, safari and drive-thru parks, zoos and wildlife parks, waterparks and adventure parks such as zipline, ropes or go-kart parks. Every map is designed from your own grounds, attractions and branding.</p></details>
+    <details class="rv"><summary>What do you need from us to get started?</summary><p>Your current map or site plan (a screenshot or photo is enough), a short description of what should be improved, and your logo or brand colors if you have them.</p></details>
+    <details class="rv"><summary>How long does it take?</summary><p>It depends on the size of your park and the package you choose. We confirm the timeline together with your quote. Premium includes priority handling.</p></details>
+    <details class="rv"><summary>How many revisions are included?</summary><p>Essential includes 2 revision rounds, Signature and Premium include 3 revision rounds.</p></details>
+    <details class="rv"><summary>Which file formats do we receive?</summary><p>Every package includes a print-ready PDF and web images (PNG/JPG). Signature adds large-format files for signage, a folding brochure version and a mobile-optimized web version. Premium also includes the source files.</p></details>
+    <details class="rv"><summary>Can you make Spanish or seasonal versions?</summary><p>Yes. Premium includes a bilingual version (for example English and Spanish) and one seasonal or event variant. Additional languages and seasonal versions are available as add-ons, priced on request.</p></details>
+    <details class="rv"><summary>Is there any obligation when we ask for a quote?</summary><p>No. A quote request is free and without obligation.</p></details>
+  </div>
+</div></section>
+
+<section id="contact"><div class="w">
+  <div class="contact rv">
     <div>
       <h2>Show us your map. We will show you the upgrade.</h2>
       <p style="margin-top:14px">There is no obligation. Briefly describe what should be improved or redone, and send the request directly. It opens as an email draft, so you can attach your current map.</p>
-      <p style="margin-top:14px">Pricing is $299–$499 per park map, depending on size and special requests.</p>
+      <p style="margin-top:14px">Packages from $299 to $499 per park map. Final price depends on park size and special requests.</p>
       <p style="margin-top:14px"><strong>Email:</strong> <a href="mailto:map2follow@gmail.com">map2follow@gmail.com</a><br><strong>Phone:</strong> <a href="tel:+41772329394">+41 77 232 93 94</a></p>
+      <p class="sel" id="selPkg" hidden></p>
     </div>
     <form id="f">
       <label for="n">Park name</label><input id="n" autocomplete="organization">
       <label for="e">Your email</label><input id="e" type="email" required autocomplete="email">
-      <label for="w">Your wishes</label><textarea id="w" rows="4" placeholder="For example: modernize the map, four seasons, also in Spanish"></textarea>
-      <button class="btn pri" type="submit">Send request</button>
+      <label for="w">Your wishes</label><textarea id="w" rows="5" placeholder="For example: Signature package, English and Spanish, new attractions opening next season"></textarea>
+      <button class="btn pri" type="submit">Send request <span class="ar" aria-hidden="true">→</span></button>
       <div class="status" id="st" role="status"></div>
     </form>
   </div>
-</section>
+</div></section>
 </main>
 
+<div class="w">
 <footer>© Map2follow · Custom park maps for amusement parks, safari parks, waterparks and adventure parks<a href="#impressum">Legal notice</a><a href="#datenschutz">Privacy policy</a><a href="https://www.map2follow.ch/" hreflang="de" lang="de">Deutsch</a></footer>
 <section class="legal" id="impressum"><h2>Legal notice</h2>
 <p><strong>Map2follow</strong><br>Operator: Morris Wernli<br>Staffeleggweg 9, 5033 Buchs AG, Switzerland<br>Email: map2follow@gmail.com · Phone: +41 77 232 93 94</p>
 <p>Despite careful checking we accept no liability for the content of external links. The example park is fictional; named places are invented.</p></section>
-<section class="legal" id="datenschutz"><h2>Privacy policy</h2>
+<section class="legal" id="datenschutz" style="padding-bottom:48px"><h2>Privacy policy</h2>
 <p><strong>Controller:</strong> as in the legal notice above. This policy follows the Swiss Federal Act on Data Protection (nDSG).</p>
 <p><strong>Contact requests.</strong> If you send us a request, we process the data you give us (park name, email address, wishes, any attached map) only to answer your request and prepare a quote. We do not pass it on to third parties.</p>
 <p><strong>Website.</strong> This site sets no cookies and uses no analytics or tracking. When you visit it, the hosting provider (GitHub Pages, GitHub Inc., USA) technically processes your IP address in server logs. Fonts are hosted on this website itself, so no data is sent to Google Fonts.</p>

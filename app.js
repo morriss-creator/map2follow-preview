@@ -2,7 +2,7 @@
 (function(){
 const $=i=>document.getElementById(i);
 // Old German anchors still lead to the right section.
-const OLD_HASH={kontakt:"contact",paket:"package",erkunden:"explore",einsatz:"uses",ablauf:"process"};
+const OLD_HASH={kontakt:"contact",paket:"packages",package:"packages",erkunden:"explore",einsatz:"uses",ablauf:"process",upgrade:"why"};
 const oh=location.hash.slice(1);if(OLD_HASH[oh]){history.replaceState(null,"","#"+OLD_HASH[oh]);const t=$(OLD_HASH[oh]);t&&t.scrollIntoView()}
 
 // ---- example park (fictional places)
@@ -56,25 +56,24 @@ if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&"IntersectionObserver
  let done=false;new IntersectionObserver((en,ob)=>{if(done||!en[0].isIntersecting)return;done=true;ob.disconnect();
   const t0=performance.now(),D=2600;(function f(t){const k=Math.min(1,(t-t0)/D),v=50+Math.sin(k*Math.PI*2)*(1-k*.4)*30;setP(v);rg.value=v;if(k<1)requestAnimationFrame(f);else{setP(50);rg.value=50}})(t0)},{threshold:.6}).observe(ba)}
 
-// ---- package builder
-const OPT=[
- {k:"base",n:"Illustrated park map",d:"Colorful and detailed, with a legend and clearly readable labels.",fix:1},
- {k:"real",n:"Photorealistic design",d:"Realistic bird's-eye view instead of an illustration."},
- {k:"seasons",n:"Four seasons",d:"Spring, summer, fall and winter as separate versions."},
- {k:"languages",n:"Multiple languages",d:"For example English and Spanish."},
- {k:"board",n:"Entrance board",d:"Large version for the entrance and signposts."},
- {k:"fold",n:"Folding map",d:"Handy version to take along."},
- {k:"digital",n:"Digital version",d:"For website, app and screens in the park."},
- {k:"highlights",n:"Highlights marked",d:"Top attractions, food and restrooms at a glance."}];
-const chosen=new Set(["base"]);
-OPT.forEach(o=>{const b=document.createElement("button");b.type="button";b.className="opt";b.dataset.k=o.k;b.setAttribute("aria-pressed",o.fix?"true":"false");if(o.fix)b.setAttribute("aria-disabled","true");
- b.innerHTML=`<b>${o.n}</b><span>${o.d}</span>`;
- b.onclick=()=>{if(o.fix)return;chosen.has(o.k)?chosen.delete(o.k):chosen.add(o.k);sum()};$("opts").appendChild(b)});
-const names=()=>OPT.filter(o=>chosen.has(o.k)).map(o=>o.n);
-function sum(){document.querySelectorAll(".opt").forEach(b=>b.setAttribute("aria-pressed",chosen.has(b.dataset.k)));$("sumL").innerHTML=names().map(n=>`<li>${n}</li>`).join("")}
-sum();
-$("sumB").onclick=()=>{$("w").value="Requested components: "+names().join(", ")+".";
- $("contact").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"center"});$("n").focus({preventScroll:true})};
+// ---- packages and add-ons
+let pkg=null;const addons=new Set();
+const reqText=()=>[pkg?`Package: ${pkg.n} ($${pkg.p})`:"",addons.size?`Add-ons (price on request): ${[...addons].join(", ")}`:""].filter(Boolean).join("\n");
+function syncReq(){const s=$("selPkg");const t=reqText();s.hidden=!t;s.textContent=t.replace(/\n/g," · ");
+ const w=$("w");const rest=w.value.split("\n").filter(l=>!/^(Package|Add-ons)/.test(l)).join("\n").trim();w.value=[t,rest].filter(Boolean).join("\n")}
+document.querySelectorAll("[data-pkg]").forEach(a=>a.addEventListener("click",()=>{pkg={n:a.dataset.pkg,p:a.dataset.price};syncReq();setTimeout(()=>$("n").focus({preventScroll:true}),400)}));
+document.querySelectorAll(".addon").forEach(b=>b.addEventListener("click",()=>{const on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);on?addons.add(b.textContent):addons.delete(b.textContent);syncReq()}));
+const names=()=>[pkg?pkg.n+" package":"",...addons].filter(Boolean);
+
+// ---- hero parallax and scroll reveal
+const calm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const hv=$("hv");
+if(hv&&!calm&&matchMedia("(pointer:fine)").matches){const h=document.querySelector(".hero");let raf=0;
+ h.addEventListener("pointermove",e=>{if(raf)return;raf=requestAnimationFrame(()=>{raf=0;const r=h.getBoundingClientRect();hv.style.setProperty("--mx",((e.clientX-r.left)/r.width-.5).toFixed(3));hv.style.setProperty("--my",((e.clientY-r.top)/r.height-.5).toFixed(3))})});
+ h.addEventListener("pointerleave",()=>{hv.style.setProperty("--mx",0);hv.style.setProperty("--my",0)})}
+const rv=document.querySelectorAll(".rv");
+if(calm||!("IntersectionObserver" in window))rv.forEach(e=>e.classList.add("in"));
+else{const io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{rootMargin:"0px 0px -8% 0px"});rv.forEach(e=>io.observe(e))}
 
 // ---- contact
 // To send directly without opening an email program, put a form endpoint here
@@ -82,7 +81,7 @@ $("sumB").onclick=()=>{$("w").value="Requested components: "+names().join(", ")+
 const FORM_ENDPOINT="";
 const TO="map2follow@gmail.com";
 $("f").addEventListener("submit",e=>{e.preventDefault();
- const t=`Park map request\nPark: ${$("n").value||"-"}\nContact: ${$("e").value||"-"}\nComponents: ${names().join(", ")}\nWishes: ${$("w").value||"-"}\n\nOur current map is attached.`;
+ const t=`Park map request\nPark: ${$("n").value||"-"}\nContact: ${$("e").value||"-"}\nPackage: ${pkg?pkg.n+" ($"+pkg.p+")":"-"}\nAdd-ons: ${[...addons].join(", ")||"-"}\nWishes: ${$("w").value||"-"}\n\nOur current map is attached.`;
  const st=$("st");
  if(FORM_ENDPOINT){
   fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({park:$("n").value,email:$("e").value,message:t})})
@@ -90,7 +89,7 @@ $("f").addEventListener("submit",e=>{e.preventDefault();
   return}
  try{navigator.clipboard.writeText(t).catch(()=>{})}catch(_){}
  st.textContent="Your email program opens with the request. Please attach your current map and send it. The text was also copied.";
- location.href="mailto:"+TO+"?subject="+encodeURIComponent("Park map request: "+($("n").value||""))+"&body="+encodeURIComponent(t)});
+ location.href="mailto:"+TO+"?subject="+encodeURIComponent("Park map request"+(pkg?" ("+pkg.n+" package)":"")+": "+($("n").value||""))+"&body="+encodeURIComponent(t)});
 // close the mobile menu after choosing a link
 document.querySelectorAll(".mmp a").forEach(a=>a.addEventListener("click",()=>a.closest("details").open=false));
 })();
