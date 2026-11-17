@@ -154,7 +154,7 @@ const names=()=>[pkg?pkg.n+" package":"",...addons].filter(Boolean);
 const FORM_ENDPOINT="";
 const TO="map2follow@gmail.com";
 $("f").addEventListener("submit",e=>{e.preventDefault();
- const t=`${sketch?"Free live preview request":"Park map request"}\nPark: ${$("n").value||"-"}\nContact: ${$("e").value||"-"}\nPackage: ${pkg?pkg.n+" ($"+pkg.p+")":"-"}\nAdd-ons: ${[...addons].join(", ")||"-"}\nWishes: ${$("w").value||"-"}\n\nOur current map is attached.`;
+ const t=`${sketch?"Free live preview request":"Park map request"}\nPark: ${$("n").value||"-"}\nType of park: ${$("pt").value||"-"}\nMap today: ${$("cm").value||"-"}\nContact: ${$("e").value||"-"}\nPackage: ${pkg?pkg.n+" ($"+pkg.p+")":"-"}\nAdd-ons: ${[...addons].join(", ")||"-"}\nWishes: ${$("w").value||"-"}\n\nOur current map is attached.`;
  const st=$("st");
  if(FORM_ENDPOINT){
   fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({park:$("n").value,email:$("e").value,message:t})})
